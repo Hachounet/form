@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+
+    --main-bg-color: #b0aeb6;
+}
+
+  body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #leftscreenpart {
+    position: relative;
+    display: flex;
+    width: 33vw;
+    height: 100vh;
+    border: 1px solid black;
+    background-image: url("premium_photo-1669083822382-eae25f24bdfa.avif");
+    background-size: 100% 100%;
+  }
+
+  #logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: hsla(0, 0%, 1%, 0.35); /* 75% opaque, i.e. 25% transparent */
+    height: 25vh;
+    width: 100%;
+  }
+
+  
+
+  #credits {
+    display: inline-block;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+
+  #rightscreenpart {
+    width: 66vw;
+  }
+
+  #marketpart {
+    height: 37.5vh; /* end of project create --var */
+    display: flex;
+    border: 1px solid red;
+    background-color: var(--main-bg-color);
+  }
+
+  #formpart {
+    height: 25vh;
+    display: flex;
+    border: 1px solid green;
+  }
+
+  #submitpart {
+    height: 37.5vh; /* create --var */
+    border: 1px solid blue;
+    background-color: var(--main-bg-color);
+    padding: 2rem 2.5rem;
+  }
+
+  #submitbutton {
+    display: block;
+  }
+
+  #submitpart p {
+    display: block;
+    background-color: white;
+    width: fit-content;
+  }
