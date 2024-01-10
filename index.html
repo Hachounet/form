@@ -5,32 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
    <div id="leftscreenpart">
         <div id="logo">
-            <div id="logotext">This is logo</div>
+            <div id="logotext">ODIN PROJECT</div>
         </div>
-        <div id="credits">Photo from Alex Shuper on Unsplash. </div>
+        <div id="credits">Photo by Halie West on Unsplash. </div>
    </div>
    <div id="rightscreenpart">
         <div id="marketpart">
             
-            <div id="marketpara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id reprehenderit suscipit animi saepe non autem dolorem ratione, minima, aperiam, adipisci doloremque placeat quam aliquam beatae? Architecto molestias neque delectus.
-        Fuga unde eveniet fugit. Dolorem, magni? Voluptatum ab explicabo fugiat corrupti ipsum totam laboriosam, recusandae corporis accusamus cupiditate animi minus debitis labore, facilis porro numquam. Veritatis quod atque facilis adipisci!</div>
+            <p class="marketpara">This is not a real online service! You know you <span class="importantwords">need</span> something like this in your life to help you <span class="importantwords">realize</span> your deepest dreams. <br>Sign up <span class="importantwords">now</span> to get started.</p>
 
-            <div id="marketpara2">You know you want to.</div>
+            <p class="marketpara">You know you <span class="importantwords">want</span> to.</p>
         </div>
 
         <div id="formpart">
-            <form action="" method="post">
-                <p>WIP</p>
+            <p>Let's do this ! </p>
+            <form id="formulaire" action="data.html" method="post" class="row">
+                <div class="column">
+
+                    <div class="block">
+                        <label for="firstname">FIRST NAME</label>
+                        <input type="text" name="firstname" id="firstname" />
+                    </div>
+
+                    <div class="block">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" />
+                    </div>
+
+                    <div class="block">
+                    <label for="pwd">PASSWORD</label>
+                    <input type="password" name="password" id="pwd" />
+                    </div>
+
+                </div>
+
+
+                <div class="column">
+
+                    <div class="block">
+                    <label for="lastname">LAST NAME</label>
+                    <input type="text" name="lastname" id="lastname" />
+                    </div>
+
+                    <div class="block">
+                    <label for="phonenumber">PHONE NUMBER</label>
+                    <input type="tel" name="phonenumber" id="phonenumber"  placeholder="French numbers only" 
+                            pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"/>
+                    </div>
+
+                    <div class="block">
+                    <label for="confirmpwd">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirmpassword" id="confirmpwd"/>
+                    </div>
+                </div>
             </form>
+
         </div>
 
         <div id="submitpart">
 
-            <button id="submitbutton">WIP</button>
+            <button id="submitbutton" type="submit">Create account</button>
             <p>Already have an account ? <a href="">Log in</a></p>
 
         </div>

@@ -2,44 +2,63 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@font-face{
+
+  font-family: "Norse";
+  src: url(fonts/norse-bold_1-webfont.woff) format(woff);
+  src: url(fonts/norse-bold_1-webfont.woff2) format(woff2);
+  font-family: 'Roboto', sans-serif;
 }
 :root {
 
-    --main-bg-color: #b0aeb6;
+    --main-bg-color: rgb(255, 255, 255);
+    --main-vh-rightpart: 35vh;
+    --important-words: burlywood;
+    font-size: 16px;
+}
+
+.importantwords {
+  color: var(--important-words);
 }
 
   body {
     display: flex;
-    width: 100vw;
-    height: 100vh;
   }
 
   #leftscreenpart {
     position: relative;
     display: flex;
-    width: 33vw;
-    height: 100vh;
-    border: 1px solid black;
-    background-image: url("premium_photo-1669083822382-eae25f24bdfa.avif");
+    width: 34%;
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
     background-size: 100% 100%;
   }
 
   #logo {
+    font-family: "Norse";
+    font-size: 5rem;
+    color: burlywood;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50%;
+    flex-wrap: wrap;
+    top: 30%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     background-color: hsla(0, 0%, 1%, 0.35); /* 75% opaque, i.e. 25% transparent */
-    height: 25vh;
+    height: 15vh;
     width: 100%;
   }
 
   
 
   #credits {
+    font-weight: 600;
+    color: burlywood;
     display: inline-block;
     position: absolute;
     bottom: 2%;
@@ -48,36 +67,127 @@
   }
 
 
-  #rightscreenpart {
-    width: 66vw;
+  #marketpart {
+    height: var( --main-vh-rightpart);
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 2;
+    gap: 16px;
+
+    font-family: "Roboto", sans-serif;
+
+    background: var(--main-bg-color);
   }
 
-  #marketpart {
-    height: 37.5vh; /* end of project create --var */
-    display: flex;
-    border: 1px solid red;
-    background-color: var(--main-bg-color);
+  .marketpara {
+    font-size: 1.5rem;
+    color: darkslategrey;
+    font-weight: 600;
+    width: 58%;
+    
   }
+
 
   #formpart {
-    height: 25vh;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
     display: flex;
-    border: 1px solid green;
+    flex-direction: column;
+    flex-shrink: 1;
+    gap: 1.5rem;
+    background-color: whitesmoke;
+    padding-left: 4rem;
+    padding-top: 2rem;
   }
 
+  #formpart p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: darkslategrey;
+    font-family: "Roboto", sans-serif;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  width: 25%;
+  height: 15.62rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.80rem;
+}
+
+input {
+  display: block;
+  appearance: none;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  width: 256px;
+  height: 32px;
+  padding-left: 8px;
+}
+
+
+input:focus{
+  outline: 2px solid #596D48;
+
+}
+
+input:valid {
+  background-color: #596D48;
+}
+
+
+
+
   #submitpart {
-    height: 37.5vh; /* create --var */
-    border: 1px solid blue;
-    background-color: var(--main-bg-color);
-    padding: 2rem 2.5rem;
+    height: var( --main-vh-rightpart);
+    width: 100%;
+    background: var(--main-bg-color);
+    padding-top: 2.5rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    gap: 1rem;
+
   }
 
   #submitbutton {
-    display: block;
+    background-color: #596D48;
+    border-radius: 5px;
+    width: 15rem;
+    height: 3rem;
+    color: burlywood;
+    font-size: 1.15rem;
+    font-weight: 600;
+    box-shadow: 3px 4px 13px 3px rgba(133,133,133,0.94);
+    -webkit-box-shadow: 3px 4px 13px 3px rgba(133,133,133,0.94);
+    -moz-box-shadow: 3px 4px 13px 3px rgba(133,133,133,0.94);
   }
 
   #submitpart p {
-    display: block;
+    font-family: "Roboto", sans-serif;
+    color: darkslategrey;
+
     background-color: white;
     width: fit-content;
+
+  }
+
+  #submitpart a {
+    color: #596D48;
+    font-weight: 600;
+    text-decoration: none;
   }
