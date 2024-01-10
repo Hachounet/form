@@ -12,7 +12,7 @@
 <body>
    <div id="leftscreenpart">
         <div id="logo">
-            <div id="logotext">ODIN PROJECT</div>
+            <div id="logotext"><p>ODIN PROJECT</p></div>
         </div>
         <div id="credits">Photo by Halie West on Unsplash. </div>
    </div>
@@ -30,18 +30,18 @@
                 <div class="column">
 
                     <div class="block">
-                        <label for="firstname">FIRST NAME</label>
-                        <input type="text" name="firstname" id="firstname" />
+                        <label for="firstname">FIRST NAME*</label>
+                        <input type="text" name="firstname" id="firstname" minlength="3" required />
                     </div>
 
                     <div class="block">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" />
+                        <label for="email">EMAIL*</label>
+                        <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" required />
                     </div>
 
                     <div class="block">
-                    <label for="pwd">PASSWORD</label>
-                    <input type="password" name="password" id="pwd" />
+                    <label for="pwd">PASSWORD*</label>
+                    <input type="password" name="password" id="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
                     </div>
 
                 </div>
@@ -50,8 +50,8 @@
                 <div class="column">
 
                     <div class="block">
-                    <label for="lastname">LAST NAME</label>
-                    <input type="text" name="lastname" id="lastname" />
+                    <label for="lastname">LAST NAME*</label>
+                    <input type="text" name="lastname" id="lastname" minlength="3" required />
                     </div>
 
                     <div class="block">
@@ -61,17 +61,19 @@
                     </div>
 
                     <div class="block">
-                    <label for="confirmpwd">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirmpassword" id="confirmpwd"/>
+                    <label for="confirmpwd">CONFIRM PASSWORD*</label>
+                    <input type="password" name="confirmpassword" id="confirmpwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required/>
                     </div>
                 </div>
+                
+               
             </form>
 
         </div>
 
         <div id="submitpart">
 
-            <button id="submitbutton" type="submit">Create account</button>
+            <button form="formulaire" id="submitbutton" type="submit">Create account</button>
             <p>Already have an account ? <a href="">Log in</a></p>
 
         </div>

@@ -35,6 +35,12 @@
     width: 34%;
     background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
     background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  #rightscreenpart {
+    position: relative;
+    z-index: 1;
   }
 
   #logo {
@@ -45,7 +51,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     top: 30%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
@@ -54,6 +59,14 @@
     width: 100%;
   }
 
+  #logotext {
+    display: flex;
+  }
+
+  #logotext p {
+    flex : 1 1 auto;
+    z-index: -3;
+  }
   
 
   #credits {
@@ -139,13 +152,24 @@ input {
 }
 
 
-input:focus{
-  outline: 2px solid #596D48;
 
+input:required:valid {
+  border: 2px solid #596D48;
 }
 
-input:valid {
-  background-color: #596D48;
+input:optional:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+  background-size: 25px;
+}
+
+
+input:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+  background-size: 25px;
+}
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgba(255, 1, 1, 0.247);
+  background-size: 25px;
 }
 
 
