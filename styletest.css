@@ -24,7 +24,6 @@ body {
 #left {
     height: 100dvh;
     width: 34dvw;
-    border: 1px solid blue;
     background: url(halie-west-25xggax4bSA-unsplash.jpg);
     background-size: 100% 100%;
     display: flex;
@@ -63,10 +62,10 @@ body {
 }
 @media screen and (min-width:1025px) {
     body {
-        flex-direction: row;
+        flex-direction: initial;
     }
     #left {
-        width: 34dvw;
+        width: 34%;
     }
     #logo{
         margin-top: 33dvh;
@@ -83,7 +82,7 @@ body {
         font-size: 1rem;
     }
     #right {
-        width: 66dvw;
+        width: 66%;
     }
 }
 
@@ -98,13 +97,148 @@ body {
 }
 
 #right {
-    border: 1px solid red;
+    
     height: 100dvh;
     background-color: rgba(255, 0, 0, 0);
     flex-shrink: 0;
     
 }
 
+#marketpart {
+    height: 35vh;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 2;
+    gap: 16px;
+
+    font-family: "Roboto", sans-serif;
+
+    background: var(--main-bg-color);
+  }
+
+  .marketpara {
+    font-size: 1.5rem;
+    color: darkslategrey;
+    font-weight: 600;
+    width: 58%;
+    
+  }
+
+  #formpart {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+    background-color: whitesmoke;
+    padding-left: 4rem;
+    padding-top: 1rem;
+  }
+
+  #formpart p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: darkslategrey;
+    font-family: "Roboto", sans-serif;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  width: 25%;
+  height: 15.62rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.80rem;
+}
+
+input {
+  display: block;
+  appearance: none;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  width: 256px;
+  height: 32px;
+  padding-left: 8px;
+}
+
+
+
+input:required:valid {
+  border: 2px solid #596D48;
+}
+
+input:optional:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+  background-size: 25px;
+}
+
+
+input:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+  background-size: 25px;
+}
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgba(255, 1, 1, 0.247);
+  background-size: 25px;
+}
+
+
+
+
+  #submitpart {
+    height: 35vh;
+    width: 100%;
+    background: var(--main-bg-color);
+    padding-top: 2.5rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    gap: 1rem;
+
+  }
+
+  #submitbutton {
+    background-color: #596D48;
+    border-radius: 5px;
+    width: 15rem;
+    height: 3rem;
+    color: burlywood;
+    font-size: 1.15rem;
+    font-weight: 600;
+    box-shadow: 3px 4px 13px 3px rgba(133,133,133,0.94);
+    -webkit-box-shadow: 3px 4px 13px 3px rgba(133,133,133,0.94);
+    -moz-box-shadow: 3px 4px 13px 3px rgba(133,133,133,0.94);
+  }
+
+  #submitpart p {
+    font-family: "Roboto", sans-serif;
+    color: darkslategrey;
+
+    background-color: white;
+    width: fit-content;
+
+  }
+
+  #submitpart a {
+    color: #596D48;
+    font-weight: 600;
+    text-decoration: none;
+  }
 
 
 
@@ -112,7 +246,6 @@ body {
 
 
 
-
-.textcolor {
-    color: antiquewhite;
+.importantwords {
+    color: burlywood;
 }

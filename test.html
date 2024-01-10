@@ -12,12 +12,81 @@
 <body>
     <div id="left">
 
-        <div id="logo" class="textcolor"><p>ODIN LOGO</p></div>
-        <div id="credits" class="textcolor">Photo by Halie West on Unsplash.</div>
+        <div id="logo" class="importantwords"><p>ODIN LOGO</p></div>
+        <div id="credits" class="importantwords">Photo by Halie West on Unsplash.</div>
 
 
     </div>
-    <div id="right">2</div>
+    <div id="right">
+        <div id="marketpart">
+            
+            <p class="marketpara">This is not a real online service! You know you <span class="importantwords">need</span> something like this in your life to help you <span class="importantwords">realize</span> your deepest dreams. <br>Sign up <span class="importantwords">now</span> to get started.</p>
+
+            <p class="marketpara">You know you <span class="importantwords">want</span> to.</p>
+        </div>
+
+        <div id="formpart">
+            <p>Let's do this ! </p>
+            <form id="formulaire" action="data.html" method="post" class="row">
+                <div class="column">
+
+                    <div class="block">
+                        <label for="firstname">FIRST NAME*</label>
+                        <input type="text" name="firstname" id="firstname" minlength="3" required />
+                    </div>
+
+                    <div class="block">
+                        <label for="email">EMAIL*</label>
+                        <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" required />
+                    </div>
+
+                    <div class="block">
+                    <label for="pwd">PASSWORD*</label>
+                    <input type="password" name="password" id="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
+                    <span class="PLANNEDTOADDADYNAMICVALIDATIONBYJS"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="column">
+
+                    <div class="block">
+                    <label for="lastname">LAST NAME*</label>
+                    <input type="text" name="lastname" id="lastname" minlength="3" required />
+                    </div>
+
+                    <div class="block">
+                    <label for="phonenumber">PHONE NUMBER</label>
+                    <input type="tel" name="phonenumber" id="phonenumber"  placeholder="French numbers only" 
+                            pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"/>
+                    </div>
+
+                    <div class="block">
+                    <label for="confirmpwd">CONFIRM PASSWORD*</label>
+                    <input type="password" name="confirmpassword" id="confirmpwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required/>
+                    </div>
+                </div>
+                
+               
+            </form>
+
+        </div>
+
+        <div id="submitpart">
+
+            <button form="formulaire" id="submitbutton" type="submit">Create account</button>
+            <p>Already have an account ? <a href="">Log in</a></p>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
 
 
 
