@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@font-face{
+
+    font-family: "Norse";
+    src: url(fonts/norse-bold_1-webfont.woff) format(woff);
+    src: url(fonts/norse-bold_1-webfont.woff2) format(woff2);
+    font-family: 'Roboto', sans-serif;
+  }
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+#left {
+    height: 100dvh;
+    width: 34dvw;
+    border: 1px solid blue;
+    background: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@media screen and (max-width:1024px) {
+    body {
+        flex-direction: column;
+    }
+    #left {
+        width: 100dvw;
+        height: 15dvh;
+        background-color: rgb(8, 78, 23);
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo {
+        background-color: none;
+        font-family: "Norse", sans-serif;
+        font-size: 64px
+        
+    }
+    #credits {
+        visibility: hidden;
+    }
+    #right {
+        width: 100vw;
+        background-color: rgba(0, 255, 255, 0);
+    }
+}
+@media screen and (min-width:1025px) {
+    body {
+        flex-direction: row;
+    }
+    #left {
+        width: 34dvw;
+    }
+    #logo{
+        margin-top: 33dvh;
+        background-color: rgba(0, 0, 0, 0.527);
+        height: 10%;
+        
+    }
+    #logo p {
+        font-family: "Norse", sans-serif;
+        font-size: 5rem;
+    }
+    #credits {
+        font-family: "Norse", sans-serif;
+        font-size: 1rem;
+    }
+    #right {
+        width: 66dvw;
+    }
+}
+
+
+#logo {
+    font-weight: 600;
+    font-size: xx-large;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#right {
+    border: 1px solid red;
+    height: 100dvh;
+    background-color: rgba(255, 0, 0, 0);
+    flex-shrink: 0;
+    
+}
+
+
+
+
+
+
+
+
+
+.textcolor {
+    color: antiquewhite;
+}
