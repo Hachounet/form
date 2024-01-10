@@ -31,13 +31,15 @@
 
   #leftscreenpart {
     position: relative;
-    display: flex;
     width: 34%;
+    display: flex;
     background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
     background-size: 100% 100%;
+    overflow: auto;
     z-index: 2;
   }
 
+ 
   #rightscreenpart {
     position: relative;
     z-index: 1;
@@ -57,17 +59,10 @@
     background-color: hsla(0, 0%, 1%, 0.35); /* 75% opaque, i.e. 25% transparent */
     height: 15vh;
     width: 100%;
-  }
+    
+  }  
 
-  #logotext {
-    display: flex;
-  }
 
-  #logotext p {
-    flex : 1 1 auto;
-    z-index: -3;
-  }
-  
 
   #credits {
     font-weight: 600;
@@ -104,13 +99,19 @@
     
   }
 
+  @media screen and (max-width: 1700px) {
+    #formulaire {
+      display: block;
+    }
+  }
+
 
   #formpart {
     font-family: "Roboto", sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex-shrink: 1;
+
     gap: 1.5rem;
     background-color: whitesmoke;
     padding-left: 4rem;
