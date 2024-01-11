@@ -1,3 +1,5 @@
+/* reset */
+
 * {
     padding: 0;
     margin: 0;
@@ -6,83 +8,142 @@
     -moz-box-sizing: border-box;
 }
 
-@font-face{
-
-  font-family: "Norse";
-  src: url(fonts/norse-bold_1-webfont.woff) format(woff);
-  src: url(fonts/norse-bold_1-webfont.woff2) format(woff2);
-  font-family: 'Roboto', sans-serif;
-}
-:root {
-
-    --main-bg-color: rgb(255, 255, 255);
-    --important-words: burlywood;
-    font-size: 16px;
-}
 
 .importantwords {
-  color: var(--important-words);
+  color: burlywood;
 }
 
-  body {
-    display: flex;
+/* Adding fonts */
+
+@font-face{
+
+    font-family: "Norse";
+    src: url(fonts/norse-bold_1-webfont.woff) format(woff);
+    src: url(fonts/norse-bold_1-webfont.woff2) format(woff2);
+    font-family: 'Roboto', sans-serif;
   }
 
-  #leftscreenpart {
-    position: static;
-    width: 34%;
-    height: 100vh;
+/* Body is flex to have 2 divs aside to each other */
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+/* Left take 34 dvw ( dynamic view width ) and is flex to allow div inside to move */
+
+#left {
+    
+    width: 34dvw;
+    background: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
-    background-size: 100% 100%;
-  }
-
-  #rightscreenpart {
-    width: 66%;
-  }
-
- 
-
-  #logo {
-    font-family: "Norse";
-    font-size: 5rem;
-    color: burlywood;
-    margin-top: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
-    background-color: hsla(0, 0%, 1%, 0.35); /* 75% opaque, i.e. 25% transparent */
-    height: 15vh;
-    width: 100%;
-    
-  }  
+}
+
+/* media query when lower than 1755px change flex direction to have form in one column */
+
+@media screen and (max-width: 1755px){
+
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+}
+
+/* Below 1025px don't display bg image and work on responsiveness */
+
+@media screen and (max-width:1024px) {
+    body {
+        flex-direction: column;
+    }
+    #left {
+        width: 100dvw;
+        height: 15dvh;
+        background-color: rgb(8, 78, 23);
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo {
+        background-color: none;
+        font-family: "Norse", sans-serif;
+        font-size: 64px
+        
+    }
+    #credits {
+        visibility: hidden;
+    }
+    #right {
+        width: 100vw;
+        background-color: rgba(0, 255, 255, 0);
+    }
+}
+
+@media screen and (min-width:1025px) {
+    body {
+        flex-direction: initial;
+    }
+    #left {
+        width: 34%;
+        
+    }
+    #logo{
+        margin-top: 33dvh;
+        background-color: rgba(0, 0, 0, 0.527);
+        height: 10%;
+        
+    }
+    #logo p {
+        font-family: "Norse", sans-serif;
+        font-size: 5rem;
+    }
+    #credits {
+        font-family: "Norse", sans-serif;
+        font-size: 1rem;
+    }
+    #right {
+        width: 66%;
+    }
+}
 
 
 
-  #credits {
+#logo {
     font-weight: 600;
-    color: burlywood;    
+    font-size: xx-large;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-  }
+}
 
+#right {
+    
+    height: 100dvh;
+    background-color: rgba(255, 0, 0, 0);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
 
-  #marketpart {
-    height: 35vh;
-    padding-bottom: 3rem;
+#marketpart {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     padding-left: 4rem;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    flex-shrink: 2;
+    flex-shrink: 1;
     gap: 16px;
 
     font-family: "Roboto", sans-serif;
@@ -94,28 +155,23 @@
     font-size: 1.5rem;
     color: darkslategrey;
     font-weight: 600;
-    width: 58%;
+    width: 75%;
     
   }
-
-  @media screen and (max-width: 1700px) {
-    #formulaire {
-      display: block;
-    }
-  }
-
 
   #formpart {
     font-family: "Roboto", sans-serif;
     width: 100%;
-    height: 30vh;
+    
     display: flex;
     flex-direction: column;
 
     gap: 1.5rem;
     background-color: whitesmoke;
+
     padding-left: 4rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   #formpart p {
@@ -131,7 +187,6 @@
 
 .column {
   width: 25%;
-  height: 15.62rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -173,18 +228,20 @@ input:focus:invalid {
   background-size: 25px;
 }
 
+#confirmPasswordFeedback {
+  color: red;
+}
 
 
 
   #submitpart {
-    height: 35vh;
     width: 100%;
     background: var(--main-bg-color);
     padding-top: 2.5rem;
     padding-left: 4rem;
     display: flex;
     flex-direction: column;
-    flex-shrink: 2;
+    flex-shrink: 1;
     gap: 1rem;
 
   }

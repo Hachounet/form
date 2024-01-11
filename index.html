@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div id="leftscreenpart">
-        <div id="logo">
-            <div id="logotext"><p>ODIN PROJECT</p></div>
-        </div>
-        <div id="credits">Photo by Halie West on Unsplash. </div>
-   </div>
-   <div id="rightscreenpart">
+    <div id="left">
+
+        <div id="logo" class="importantwords"><p>ODIN LOGO</p></div>
+        <div id="credits" class="importantwords">Photo by Halie West on Unsplash.</div>
+
+
+    </div>
+    <div id="right">
         <div id="marketpart">
             
             <p class="marketpara">This is not a real online service! You know you <span class="importantwords">need</span> something like this in your life to help you <span class="importantwords">realize</span> your deepest dreams. <br>Sign up <span class="importantwords">now</span> to get started.</p>
@@ -26,34 +27,29 @@
 
         <div id="formpart">
             <p>Let's do this ! </p>
-            <form id="formulaire" action="data.html" method="post" class="row">
+            <form id="formulaire" action="" method="post" class="row" onsubmit="">
                 <div class="column">
 
                     <div class="block">
                         <label for="firstname">FIRST NAME*</label>
-                        <input type="text" name="firstname" id="firstname" minlength="3" required />
+                        <input type="text" name="firstname" id="firstname" minlength="3" />
                     </div>
+
+                    <div class="block">
+                        <label for="lastname">LAST NAME*</label>
+                        <input type="text" name="lastname" id="lastname" minlength="3" />
+                        </div>
 
                     <div class="block">
                         <label for="email">EMAIL*</label>
-                        <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" required />
+                        <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" />
                     </div>
 
-                    <div class="block">
-                    <label for="pwd">PASSWORD*</label>
-                    <input type="password" name="password" id="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
-                    <span class="PLANNEDTOADDADYNAMICVALIDATIONBYJS"></span>
-                    </div>
 
                 </div>
 
 
                 <div class="column">
-
-                    <div class="block">
-                    <label for="lastname">LAST NAME*</label>
-                    <input type="text" name="lastname" id="lastname" minlength="3" required />
-                    </div>
 
                     <div class="block">
                     <label for="phonenumber">PHONE NUMBER</label>
@@ -62,8 +58,14 @@
                     </div>
 
                     <div class="block">
+                        <label for="pwd">PASSWORD*</label>
+                        <input type="password" name="password" id="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
+                        </div>
+
+                    <div class="block">
                     <label for="confirmpwd">CONFIRM PASSWORD*</label>
                     <input type="password" name="confirmpassword" id="confirmpwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required/>
+                    <small id="confirmPasswordFeedback"></small>
                     </div>
                 </div>
                 
@@ -78,6 +80,45 @@
             <p>Already have an account ? <a href="">Log in</a></p>
 
         </div>
-   </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+<script>
+
+const form = document.getElementById("formulaire");
+const password = form.password;
+const confirmPassword = form.confirmpassword
+const feedback = document.getElementById("confirmPasswordFeedback");
+let isPasswordMatch = false;
+
+confirmPassword.addEventListener("input", () => {
+
+if ( password.value != confirmPassword.value ){
+    feedback.innerHTML = "Password did not match."
+    isPasswordMatch = false;
+}
+else {
+    feedback.innerHTML = "";
+    isPasswordMatch = true;
+}
+
+
+
+})
+
+
+
+</script>
 </body>
 </html>
