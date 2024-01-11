@@ -27,7 +27,7 @@
 
         <div id="formpart">
             <p>Let's do this ! </p>
-            <form id="formulaire" action="data.html" method="post" class="row" >
+            <form id="formulaire" action="data.html" method="post" class="row">
                 <div class="column">
 
                     <div class="block">
@@ -36,15 +36,15 @@
                     </div>
 
                     <div class="block">
+                        <label for="lastname">LAST NAME*</label>
+                        <input type="text" name="lastname" id="lastname" minlength="3" required />
+                        </div>
+
+                    <div class="block">
                         <label for="email">EMAIL*</label>
                         <input type="email" name="email" id="email" placeholder="youradressemail@gmail.com" required />
                     </div>
 
-                    <div class="block">
-                    <label for="pwd">PASSWORD*</label>
-                    <input type="password" name="password" id="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
-                    <span class="PLANNEDTOADDADYNAMICVALIDATIONBYJS"></span>
-                    </div>
 
                 </div>
 
@@ -52,15 +52,16 @@
                 <div class="column">
 
                     <div class="block">
-                    <label for="lastname">LAST NAME*</label>
-                    <input type="text" name="lastname" id="lastname" minlength="3" required />
-                    </div>
-
-                    <div class="block">
                     <label for="phonenumber">PHONE NUMBER</label>
                     <input type="tel" name="phonenumber" id="phonenumber"  placeholder="French numbers only" 
                             pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"/>
                     </div>
+
+                    <div class="block">
+                        <label for="pwd">PASSWORD*</label>
+                        <input type="password" name="password" id="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required />
+                        <span class="PLANNEDTOADDADYNAMICVALIDATIONBYJS"></span>
+                        </div>
 
                     <div class="block">
                     <label for="confirmpwd">CONFIRM PASSWORD*</label>

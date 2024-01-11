@@ -39,6 +39,16 @@ body {
     
 }
 
+@media screen and (max-width: 1755px){
+
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+}
+
+
 @media screen and (max-width:1024px) {
     body {
         flex-direction: column;
@@ -152,8 +162,10 @@ body {
 
     gap: 1.5rem;
     background-color: whitesmoke;
+
     padding-left: 4rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   #formpart p {
@@ -169,7 +181,6 @@ body {
 
 .column {
   width: 25%;
-  height: 15.62rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
