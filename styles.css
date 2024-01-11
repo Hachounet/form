@@ -57,6 +57,13 @@ body {
   
 }
 
+@media screen and (min-width: 1756px){
+
+  #right {
+    height: 100dvh;
+  }
+}
+
 /* Below 1025px don't display bg image and work on responsiveness */
 
 @media screen and (max-width:1024px) {
@@ -65,7 +72,6 @@ body {
     }
     #left {
         width: 100dvw;
-        height: 15dvh;
         background-color: rgb(8, 78, 23);
         background-image: none;
         display: flex;
@@ -127,7 +133,7 @@ body {
 
 #right {
     
-    height: 100dvh;
+    
     background-color: rgba(255, 0, 0, 0);
     flex-shrink: 0;
     display: flex;
