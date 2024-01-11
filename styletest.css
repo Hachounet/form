@@ -222,6 +222,9 @@ input:focus:invalid {
   background-size: 25px;
 }
 
+#confirmPasswordFeedback {
+  color: red;
+}
 
 
 
